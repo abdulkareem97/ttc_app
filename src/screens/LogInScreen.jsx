@@ -30,7 +30,7 @@ const LogInScreen = ({navigation}) => {
           const author = data.data.user
           dispatch(loginUser(author))
           // cons
-          navigation.navigate('SignUp')
+          // navigation.navigate('SignUp')
           navigation.dispatch(
             CommonActions.reset({
               index: 0,
