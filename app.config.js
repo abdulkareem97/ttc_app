@@ -1,6 +1,6 @@
 export default {
   "expo": {
-    "name": "aqutech",
+    "name": "Ttc",
     "slug": "aqutech",
     "version": "1.0.0",
     "orientation": "portrait",

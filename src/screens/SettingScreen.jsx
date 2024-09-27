@@ -2,7 +2,10 @@ import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { CommonActions } from '@react-navigation/native';
+import { logOutUser } from '../../store/counterSlice';
+import { useDispatch } from 'react-redux';
 const SettingScreen = ({navigation}) => {
+    const dispatch = useDispatch()
     const logOutGoogle = async () => {
         // console.log('here')
         try {
@@ -11,8 +14,10 @@ const SettingScreen = ({navigation}) => {
           
           await GoogleSignin.signOut(); // Sign out the user
           // setUserInfo(null); r// Clear user info from state
+
           
           console.log('User signed out successfully');
+          dispatch(logOutUser())
           navigation.dispatch(
             CommonActions.reset({
               index: 0,
